@@ -1347,6 +1347,14 @@
             right: 19px;
         }
     }
+    .fix-block {
+        width: 120px;
+        height: 120px;
+    }
+    .link-fix {
+        width: 102px;
+        height: 102px;
+    }
 }
 @media (max-width: 992px) {
     .header {
@@ -2024,5 +2032,13 @@
             font-size: 18px;
             line-height: 21px;
         }
+    }
+    .fix-block {
+        width: 105px;
+        height: 105px;
+    }
+    .link-fix {
+        width: 88px;
+        height: 88px;
     }
 }
