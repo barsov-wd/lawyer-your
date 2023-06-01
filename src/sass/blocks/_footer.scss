@@ -1,0 +1,59 @@
+.footer {
+    padding: 37px 0;
+    background: #5A7CA8;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__address {
+        text-align: right;
+    }
+    &__contacts-info {
+        text-align: center;
+    }
+    &__contacts-text {
+        max-width: 460px;
+        width: 100%;
+        font-size: 18px;
+        line-height: 21px;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    &__contacts-policy-link {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 120%;
+        color: #fff;
+        text-decoration: underline;
+    }
+    &__address-city,
+    &__address-street {
+        font-size: 20px;
+        line-height: 23px;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+    &__address-city {
+        position: relative;
+        text-decoration: underline;
+        width: 91px;
+        margin-left: auto;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -34px;
+            width: 19px;
+            height: 25px;
+            background: url('../img/footer/map-icon.svg');
+        }
+    }
+    &__phone {
+        font-size: 25px;
+        line-height: 29px;
+        color: #fff;
+    }
+}

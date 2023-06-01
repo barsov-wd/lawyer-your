@@ -1,0 +1,34 @@
+.professional-help {
+    padding-bottom: 140px;
+    &__title {
+        margin-bottom: 70px;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1370px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    &__block {
+        padding: 35px 64px;
+        width: 830px;
+        border: 2px solid #8BBF9F;
+        border-radius: 40px;
+    }
+    &__block-descr {
+        font-size: 25px;
+        line-height: 29px;
+        color: #000;
+        margin-bottom: 25px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &--color {
+            font-family: 'Roboto Bold', sans-serif;
+            font-weight: 700;
+            color: #5A7CA8;
+        }
+    }
+}

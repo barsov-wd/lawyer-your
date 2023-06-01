@@ -1,0 +1,126 @@
+.modal {
+    position: fixed;
+    z-index: 199;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    background: rgba(45, 45, 45, 0.6);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+
+    &--active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__container {
+        min-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+    &-main__dialog {
+        position: relative;
+        max-width: 1100px;
+        width: 100%;
+        min-height: 596px;
+        position: relative;
+        text-align: center;
+        padding-top: 108px;
+        background: #fff;
+        border-radius: 20px;
+    }
+
+    &-main__close {
+        position: absolute;
+        top: 26px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    &-main__title {
+        font-family: 'Roboto Bold', sans-serif;
+        max-width: 786px;
+        width: 100%;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 53px;
+        color: #000000;
+        margin: 0 auto 36px;
+    }
+
+    &-main__input-group {
+        width: 557px;
+        margin: 0 auto 20px;
+    }
+
+    &-main__input {
+        font-weight: 400;
+        width: 100%;
+        height: 72px;
+        border: none;
+        border: 3px solid #5A7CA8;
+        border-radius: 20px;
+        background-color: transparent;
+        padding: 0 20px;
+        font-size: 20px;
+        line-height: 23px;
+        color: rgba(0, 0, 0, 0.25);
+
+        &::placeholder {
+            color: rgba(0, 0, 0, 0.25);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &-main__button {
+        width: 557px;
+        height: 72px;
+    }
+
+    &-thanks__dialog {
+        position: relative;
+        max-width: 696px;
+        width: 100%;
+        min-height: 355px;
+        position: relative;
+        text-align: center;
+        padding-top: 103px;
+        background: #fff;
+        border-radius: 20px;
+    }
+
+    &-thanks__close {
+        position: absolute;
+        top: 26px;
+        right: 20px;
+        cursor: pointer;
+    }
+    &-thanks__title {
+        font-family: 'Roboto Bold', sans-serif;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 53px;
+        margin-bottom: 20px;
+        color: #8BBF9F;
+    }
+    &-thanks__descr {
+        font-size: 32px;
+        line-height: 38px;
+        color: #000;
+    }
+}

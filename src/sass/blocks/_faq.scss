@@ -1,0 +1,104 @@
+.faq {
+    padding: 140px 0;
+    background-color: #fff;
+    &__title {
+        margin-bottom: 70px;
+    }
+    &__box {
+        width: 1370px;
+        margin: 0 auto 35px;
+    }
+
+    &__item {
+        // overflow: hidden;
+        position: relative;
+        z-index: 2;
+        margin-bottom: 20px;
+        // border-radius: 20px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+
+        &--active {
+            .faq__item__title {
+                color: #79A78B;
+            }
+
+            .faq__item__text {
+                opacity: 1;
+                height: auto;
+                padding-top: 25px;
+                padding-bottom: 25px;
+                font-size: 20px;
+                line-height: 24px;
+                color: #303030;
+                transition: all 0.3s;
+            }
+            .faq__item-arrow {
+                position: absolute;
+                top: 37%;
+                transform: translateY(-50%);
+                transform: rotate(180deg);
+                transition: all .3s;
+            }
+        }
+
+        &__title {
+            position: relative;
+            font-family: 'Roboto Bold', sans-serif;
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 38px;
+            color: #79A78B;
+            padding-top: 51px;
+            padding-bottom: 51px;
+            padding-left: 50px;
+            padding-right: 10px;
+            background: #FFFFFF;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 100%;
+            &--two {
+                padding-top: 32px;
+                padding-bottom: 32px;
+                padding-right: 250px;
+            }
+            &--three {
+                padding-top: 32px;
+                padding-bottom: 32px;
+                padding-right: 289px;
+            }
+            &--four {
+                padding-top: 32px;
+                padding-bottom: 32px;
+                padding-right: 404px;
+            }
+        }
+
+        &__text {
+            opacity: 0;
+            height: 0;
+            padding-left: 25px;
+            padding-right: 25px;
+            transition: all 0.3s;
+        }
+    }
+
+    &__button {
+        display: block;
+        width: 405px;
+        height: 72px;
+        margin: 0 auto;
+    }
+
+    &__item-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 27px;
+        transition: all .3s;
+    }
+}
