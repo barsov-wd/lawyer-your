@@ -1,11 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
     
-    // document.querySelectorAll('video').forEach((item, index) => {
-    //     item.addEventListener('canplay', () => {
-    //         item.load()
-    //     }, {once: true})
-    // });
-    // функция для модалки
+    // modal
 
     function calcScroll() {
         let div = document.createElement('div');
@@ -73,4 +68,60 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     faq('.faq__item__title', 'faq__item--active');
+
+    // tabs
+
+    const tabs = document.querySelectorAll('.chat__tab'),
+        tabsContent = document.querySelectorAll('.chat__item'),
+        tabsParent = document.querySelector('.chat__tabs');
+
+    function hideTabContent() {
+        tabsContent.forEach(item => {
+            item.style.display = 'none';
+            item.classList.remove('fade');
+        });
+
+        tabs.forEach(item => {
+            item.classList.remove('chat__tab--active');
+        });
+    }
+
+    function showTabContent(i = 0) {
+        tabsContent[i].style.display = 'block';
+        tabsContent[i].classList.add('fade');
+        tabs[i].classList.add('chat__tab--active');
+    }
+
+    hideTabContent();
+    showTabContent();
+
+    tabsParent.addEventListener('click', (e) => {
+        const target = e.target;
+
+        if (target.classList.contains('chat__tab')) {
+            tabs.forEach((item, i) => {
+                if (target == item) {
+                    hideTabContent();
+                    showTabContent(i);
+                }
+            });
+        }
+    });
+
+
+    // open chat
+
+    const btnFix = document.querySelector('.fix-block'),
+          chat = document.querySelector('.chat'),
+          chatClose = document.querySelector('.chat__close');
+
+    btnFix.addEventListener('click', () => {
+        chat.classList.add('chat--active');
+        btnFix.style.display = 'none';
+    });
+
+    chatClose.addEventListener('click', () => {
+        chat.classList.remove('chat--active');
+        btnFix.style.display = 'block';
+    })
 });
